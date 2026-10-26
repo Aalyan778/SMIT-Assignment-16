@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 4px solid #493535;
+    background: white;
+    padding: 44px 0 54px;
+}
+
+.container {
+    width: 1062px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 130px 330px 520px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.layout h3 {
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header {
+    background: #111729;
+    color: white;
+}
+
+.menu {
+    background: #f5364b;
+    color: white;
+}
+
+.hero {
+    background: #4e86c4;
+    color: white;
+}
+
+.main {
+    background: #24364e;
+    color: white;
+}
+
+.banner {
+    background: #ffd36b;
+    color: #111;
+}
+
+.extra {
+    background: #49bc9c;
+    color: #111;
+}
+
+.image {
+    background: #bfe4e4;
+    color: #111;
+}
+
+/* MOBILE */
+.mobile .header,
+.mobile .menu {
+    height: 37px;
+}
+
+.mobile .hero,
+.mobile .main {
+    height: 93px;
+}
+
+.mobile .banner,
+.mobile .extra,
+.mobile .image {
+    height: 70px;
+}
+
+/* TABLET */
+.tablet .header {
+    height: 38px;
+}
+
+.tablet .hero {
+    height: 144px;
+}
+
+.tablet-content {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    grid-template-rows: 144px 71px 73px;
+}
+
+.tablet-content .menu {
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+
+.tablet-content .main {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.tablet-content .banner {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.tablet-bottom {
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* DESKTOP */
+.desktop-top {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    height: 38px;
+}
+
+.desktop .hero {
+    height: 216px;
+}
+
+.desktop-content {
+    display: grid;
+    grid-template-columns: 260px 130px 130px;
+    grid-template-rows: 72px 72px;
+}
+
+.desktop-content .main {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.desktop-content .blank {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    background: white;
+}
+
+.desktop-content .image {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.desktop-content .extra {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.desktop .banner {
+    height: 73px;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 1061px) {
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body {
+        overflow-x: auto;
+    }
+}
